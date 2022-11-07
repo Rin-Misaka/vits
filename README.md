@@ -1,3 +1,5 @@
+# [vits单人kaggle notebook](https://colab.research.google.com/drive/1_02NpQmuduAomkrgXWfNWHnzYIsnqDsh?usp=sharing)
+
 # VITS: Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech
 
 ### Jaehyeon Kim, Jungil Kong, and Juhee Son
