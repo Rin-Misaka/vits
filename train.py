@@ -207,8 +207,14 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
         logger.info('Train Epoch: {} [{:.0f}%]'.format(
           epoch,
           100. * batch_idx / len(train_loader)))
+        #for kaggle新增
+        print('Train Epoch: {} [{:.0f}%]'.format(
+          epoch,
+          100. * batch_idx / len(train_loader)))
+        #
         logger.info([x.item() for x in losses] + [global_step, lr])
-        
+        #for kaggle新增
+        print([x.item() for x in losses] + [global_step, lr])
         scalar_dict = {"loss/g/total": loss_gen_all, "loss/d/total": loss_disc_all, "learning_rate": lr, "grad_norm_d": grad_norm_d, "grad_norm_g": grad_norm_g}
         scalar_dict.update({"loss/g/fm": loss_fm, "loss/g/mel": loss_mel, "loss/g/dur": loss_dur, "loss/g/kl": loss_kl})
 
