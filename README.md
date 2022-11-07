@@ -56,3 +56,8 @@ python train_ms.py -c configs/vctk_base.json -m vctk_base
 
 ## Inference Example
 See [inference.ipynb](inference.ipynb)
+
+## 在线训练
+在kaggle上 [vits单人kaggle notebook](https://colab.research.google.com/drive/1_02NpQmuduAomkrgXWfNWHnzYIsnqDsh?usp=sharing)
+
+朽木冬子 [未清洗make love数据](https://drive.google.com/file/d/1L62VERKwKYWcWV-C-rdvIkdOGbkKg9Un/view?usp=share_link)
