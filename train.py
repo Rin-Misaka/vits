@@ -215,6 +215,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
         logger.info([x.item() for x in losses] + [global_step, lr])
         #for kaggle新增
         print([x.item() for x in losses] + [global_step, lr])
+        #
         scalar_dict = {"loss/g/total": loss_gen_all, "loss/d/total": loss_disc_all, "learning_rate": lr, "grad_norm_d": grad_norm_d, "grad_norm_g": grad_norm_g}
         scalar_dict.update({"loss/g/fm": loss_fm, "loss/g/mel": loss_mel, "loss/g/dur": loss_dur, "loss/g/kl": loss_kl})
 
@@ -241,7 +242,9 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
   
   if rank == 0:
     logger.info('====> Epoch: {}'.format(epoch))
-
+    #for kaggle新增
+    print('====> Epoch: {}'.format(epoch))
+    #
  
 def evaluate(hps, generator, eval_loader, writer_eval):
     generator.eval()
